@@ -4,6 +4,6 @@ ActiveAdmin.register System do
     column "Service Ceiling (ft)", :service_ceiling
     column "Max Speed (kts)", :max_speed
     column "Endurance (days)", :endurance
-    column "Payload (lbs)", :payload
+    column "Payload (lbs)", :payload_lbs
   end
 end
