@@ -1,4 +1,8 @@
 Extreme::Application.routes.draw do
+  get "analysis/index"
+
+  get "analysis/comparison"
+
   resources :links
 
   ActiveAdmin.routes(self)
