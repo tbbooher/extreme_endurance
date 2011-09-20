@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Max speed:
+  = @system.max_speed
+%p
+  %b Endurance:
+  = @system.endurance
+%p
+  %b Service ceiling:
+  = @system.service_ceiling
+%p
+  %b Name:
+  = @system.name
+%p
+  %b Payload lbs:
+  = @system.payload_lbs
+
+= link_to 'Edit', edit_system_path(@system)
+\|
+= link_to 'Back', systems_path

@@ -1,0 +1,27 @@
+%h1 Listing systems
+
+%table
+  %tr
+    %th Max speed
+    %th Endurance
+    %th Service ceiling
+    %th Name
+    %th Payload lbs
+    %th
+    %th
+    %th
+
+  - @systems.each do |system|
+    %tr
+      %td= system.max_speed
+      %td= system.endurance
+      %td= system.service_ceiling
+      %td= system.name
+      %td= system.payload_lbs
+      %td= link_to 'Show', system
+      %td= link_to 'Edit', edit_system_path(system)
+      %td= link_to 'Destroy', system, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New System', new_system_path
