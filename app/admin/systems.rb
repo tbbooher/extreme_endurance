@@ -5,5 +5,6 @@ ActiveAdmin.register System do
     column "Max Speed (kts)", :max_speed
     column "Endurance (days)", :endurance
     column "Payload (lbs)", :payload_lbs
+    default_actions
   end
 end
