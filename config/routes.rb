@@ -1,14 +1,4 @@
 Extreme::Application.routes.draw do
-  get "analysis/index"
-
-  get "analysis/comparison"
-
-  resources :links
-
-  ActiveAdmin.routes(self)
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
-
   resources :systems
 
   #get \"users\/show\"
@@ -18,6 +8,8 @@ Extreme::Application.routes.draw do
   devise_for :users
   resources :users, :only => :show
 
+  get "analysis/comparison"
+  get "analysis/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
