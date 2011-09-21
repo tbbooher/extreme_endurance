@@ -1,15 +1,22 @@
 Extreme::Application.routes.draw do
-  resources :systems
 
   #get \"users\/show\"
 
   root :to => "home#index"
 
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   devise_for :users
+
   resources :users, :only => :show
 
   get "analysis/comparison"
   get "analysis/index"
+
+  resources :systems
+  resources :links
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
