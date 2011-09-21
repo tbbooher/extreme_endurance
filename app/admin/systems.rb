@@ -7,4 +7,13 @@ ActiveAdmin.register System do
     column "Payload (lbs)", :payload_lbs
     default_actions
   end
+  
+  form do |f|
+    f.inputs "Details" do
+      f.input :name
+      f.input :endurance, :label => "Endurance (days)"
+      f.input :service_ceiling, :label => "Cruise Altitude (kft)"
+      f.input :max_speed, :label => "Cruise Speed (kts)"
+      f.input :payload_lbs, :label => "Payload (lbs)"
+    end
 end
