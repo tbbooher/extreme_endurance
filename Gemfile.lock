@@ -217,6 +217,7 @@ DEPENDENCIES
   haml (= 3.1.1)
   haml-rails (= 0.3.4)
   heroku
+  inherited_resources
   launchy (= 0.4.0)
   libnotify
   rails (= 3.0.6)
