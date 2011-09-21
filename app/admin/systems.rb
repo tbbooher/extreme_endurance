@@ -16,4 +16,6 @@ ActiveAdmin.register System do
       f.input :max_speed, :label => "Cruise Speed (kts)"
       f.input :payload_lbs, :label => "Payload (lbs)"
     end
+    f.buttons
+  end
 end
