@@ -35,4 +35,5 @@ gem "rails-footnotes", ">= 3.7", :group => :development
 # booher custom additions
 gem 'activeadmin'
 gem 'heroku'
+gem 'inherited_resources'
 
