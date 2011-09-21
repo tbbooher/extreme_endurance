@@ -7,14 +7,14 @@
     = yield :javascript_includes
     = csrf_meta_tag
   %body
-    div#wrapper
-      div#header
-      div#title_bar
-      div.flashes
+    %div#wrapper
+      %div#header
+      %div#title_bar
+      %div.flashes
         - flash.each do |name, msg|
           = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
-      div#active_admin_content.with_sidebar
-        div#main_content_wrapper
-          div#main_content
+      %div#active_admin_content.with_sidebar
+        %div#main_content_wrapper
+          %div#main_content
             = yield
-      div#footer
+      %div#footer
