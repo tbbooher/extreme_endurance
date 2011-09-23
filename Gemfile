@@ -1,7 +1,7 @@
 require 'rbconfig'
 HOST_OS = Config::CONFIG['host_os']
 source 'http://rubygems.org'
-gem 'rails', '3.0.6'
+gem 'rails', '3.0.10'
 gem 'sqlite3'
 gem "haml", "3.1.1"
 gem "haml-rails", "0.3.4", :group => :development
