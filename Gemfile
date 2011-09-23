@@ -45,7 +45,5 @@ group :assets do
   gem 'uglifier'  
 end
 
-gem 'pg'
-
 gem 'jquery-rails'
 
