@@ -49,11 +49,11 @@ group :assets do
   gem 'uglifier'  
 end
 
-#group :production do
+group :production do
 #  gem 'therubyracer-heroku'
-#  gem 'pg'
+  gem 'pg'
 #  gem 'arel'
-#end
+end
 
 gem 'jquery-rails'
 
