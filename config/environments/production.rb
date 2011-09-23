@@ -55,4 +55,13 @@ Extreme::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
 
+  # Compress JavaScript and CSS  
+  config.assets.compress = true  
+
+  # Don't fallback to assets pipeline  
+  config.assets.compile = false  
+
+  # Generate digests for assets URLs  
+  config.assets.digest = true  
+
 end

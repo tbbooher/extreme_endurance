@@ -35,7 +35,15 @@ gem "rails-footnotes", ">= 3.7", :group => :development
 # booher custom additions
 gem 'activeadmin'
 gem 'heroku'
-gem 'barista'
-gem 'therubyracer', :require => nil
+#gem 'barista'
+#gem 'therubyracer', :require => nil
 gem 'inherited_resources'
+
+group :assets do
+  gem 'sass-rails', " ~> 3.1.0"
+  gem 'coffee-rails', " ~> 3.1.0"  
+  gem 'uglifier'  
+end
+
+gem 'jquery-rails'
 
