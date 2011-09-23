@@ -29,7 +29,7 @@ gem "guard-rails", ">= 0.0.3", :group => :development
 gem "guard-livereload", ">= 0.3.0", :group => :development
 gem "guard-rspec", ">= 0.4.3", :group => :development
 gem "guard-cucumber", ">= 0.6.1", :group => :development
-gem "devise", "1.3.4"
+gem "devise", ">= 1.3.4"
 gem "rails-footnotes", ">= 3.7", :group => :development
 
 # booher custom additions
