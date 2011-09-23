@@ -2,8 +2,8 @@
 %html
   %head
     %title extreme
-    = stylesheet_link_tag :all
-    = javascript_include_tag :defaults, 'd3.js', 'd3.geo.min.js', 'd3.chart.min.js', 'd3.layout.js', 'd3.geom.js'
+    = stylesheet_link_tag :application
+    = javascript_include_tag :application
     = yield :javascript_includes
     = csrf_meta_tag
   %body

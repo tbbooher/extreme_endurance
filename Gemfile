@@ -1,7 +1,7 @@
 require 'rbconfig'
 HOST_OS = Config::CONFIG['host_os']
 source 'http://rubygems.org'
-gem 'rails', '3.0.10'
+gem 'rails', '3.1.0'
 gem 'sqlite3'
 gem "haml", "3.1.1"
 gem "haml-rails", "0.3.4", :group => :development
@@ -29,13 +29,21 @@ gem "guard-rails", ">= 0.0.3", :group => :development
 gem "guard-livereload", ">= 0.3.0", :group => :development
 gem "guard-rspec", ">= 0.4.3", :group => :development
 gem "guard-cucumber", ">= 0.6.1", :group => :development
-gem "devise", "1.3.4"
+gem "devise", ">= 1.3.4"
 gem "rails-footnotes", ">= 3.7", :group => :development
 
 # booher custom additions
 gem 'activeadmin'
 gem 'heroku'
-gem 'barista'
-gem 'therubyracer', :require => nil
+#gem 'barista'
+#gem 'therubyracer', :require => nil
 gem 'inherited_resources'
+
+group :assets do
+  gem 'sass-rails', " ~> 3.1.0"
+  gem 'coffee-rails', " ~> 3.1.0"  
+  gem 'uglifier'  
+end
+
+gem 'jquery-rails'
 
