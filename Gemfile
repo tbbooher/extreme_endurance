@@ -45,7 +45,7 @@ group :assets do
   gem 'uglifier'  
 end
 
-gem 'pg', :group => :production
+gem 'pg'
 
 gem 'jquery-rails'
 
