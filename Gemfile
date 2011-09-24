@@ -57,3 +57,4 @@ end
 
 gem 'jquery-rails'
 
+gem 'coffeebeans'

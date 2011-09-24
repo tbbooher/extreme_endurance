@@ -8,7 +8,8 @@
 
 %div#chart
 
-= render :partial => "chart"
+%script{:language => "JavaScript"}
+  = raw render :partial => "chart.js"
 
 %p We want to show a simple plot of altitude, airspeed and persistence
 
