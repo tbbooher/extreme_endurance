@@ -1,6 +1,7 @@
 quantize = (d) ->
   "q" + Math.min(8, ~~(data[d.id] * 9 / 12)) + "-9"
 
+data = []
 path = d3.geo.path()
 svg = d3.select("#map").append("svg:svg")
 counties = svg.append("svg:g").attr("id", "counties").attr("class", "Blues")

@@ -22,6 +22,8 @@
 %script{:language => "JavaScript"}
   = raw render :partial => "choropleth.js"
 
+= stylesheet_link_tag "http://mbostock.github.com/d3/ex/colorbrewer.css", "http://mbostock.github.com/d3/ex/choropleth.css"
+
 %p We want to show a simple plot of altitude, airspeed and persistence
 
 %p I would also like to time available for each asset as a function of distance to target. I would like this to read from the database

@@ -1,19 +1,18 @@
-data = [ 3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 7 ]
+line_data = [ 3, 6, 2, 7, 5, 2, 1, 3, 8, 9, 2, 5, 7 ]
 w = 400
 h = 200
 margin = 20
-y = d3.scale.linear().domain([ 0, d3.max(data) ]).range([ 0 + margin, h - margin ])
-x = d3.scale.linear().domain([ 0, data.length ]).range([ 0 + margin, w - margin ])
-vis = d3.select("body").append("svg:svg").attr("width", w).attr("height", h)
-g = vis.append("svg:g").attr("transform", "translate(0, 200)")
-vis = d3.select("body").append("svg:svg").attr("width", w).attr("height", h)
+y = d3.scale.linear().domain([ 0, d3.max(line_data) ]).range([ 0 + margin, h - margin ])
+x = d3.scale.linear().domain([ 0, line_data.length ]).range([ 0 + margin, w - margin ])
+vis = d3.select("#chart").append("svg:svg").attr("width", w).attr("height", h)
 g = vis.append("svg:g").attr("transform", "translate(0, 200)")
 line = d3.svg.line().x((d, i) ->
   x i
 ).y((d) ->
   -1 * y(d)
 )
-g.append("svg:path").attr "d", line(data)
+
+g.append("svg:path").attr "d", line(line_data)
 g.selectAll(".xLabel").data(x.ticks(5)).enter().append("svg:text").attr("class", "xLabel").text(String).attr("x", (d) ->
   x d
 ).attr("y", 0).attr "text-anchor", "middle"
