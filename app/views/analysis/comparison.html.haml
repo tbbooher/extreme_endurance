@@ -8,8 +8,19 @@
 
 %div#chart
 
+%div#map
+
+:css
+  path {
+    stroke-width: 2px;
+    stroke: rgb(200,0,0);
+  }
+
 %script{:language => "JavaScript"}
   = raw render :partial => "chart.js"
+
+%script{:language => "JavaScript"}
+  = raw render :partial => "choropleth.js"
 
 %p We want to show a simple plot of altitude, airspeed and persistence
 
