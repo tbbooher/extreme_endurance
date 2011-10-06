@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110920152423) do
+ActiveRecord::Schema.define(:version => 20111006022753) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -60,6 +60,25 @@ ActiveRecord::Schema.define(:version => 20110920152423) do
     t.integer  "service_ceiling"
     t.string   "name"
     t.integer  "payload_lbs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "uas", :force => true do |t|
+    t.string   "country"
+    t.string   "prime"
+    t.string   "designation"
+    t.string   "development"
+    t.string   "production"
+    t.string   "operation"
+    t.string   "propulsion"
+    t.integer  "gross_wt_kg"
+    t.integer  "payload_weight_kg"
+    t.integer  "wing_span_m"
+    t.integer  "endurance_hr"
+    t.integer  "range_km"
+    t.integer  "ceiling_m"
+    t.string   "mission"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
