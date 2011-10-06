@@ -99,7 +99,6 @@ GEM
       i18n (~> 0.4)
     gherkin (2.5.1)
       json (>= 1.4.6)
-    growl (1.0.3)
     guard (0.8.4)
       thor (~> 0.14.6)
     guard-bundler (0.1.3)
@@ -143,6 +142,7 @@ GEM
     launchy (0.4.0)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
+    libnotify (0.5.7)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -156,6 +156,7 @@ GEM
     multi_json (1.0.3)
     nokogiri (1.5.0)
     orm_adapter (0.0.5)
+    pg (0.11.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.2)
@@ -186,7 +187,8 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2)
-    rb-fsevent (0.4.3.1)
+    rb-inotify (0.8.8)
+      ffi (>= 0.5.0)
     rdoc (3.9.4)
     responders (0.6.4)
     rest-client (1.6.7)
@@ -249,7 +251,6 @@ DEPENDENCIES
   database_cleaner (= 0.6.7)
   devise (>= 1.3.4)
   factory_girl_rails (= 1.1.beta1)
-  growl
   guard (>= 0.6.2)
   guard-bundler (>= 0.1.3)
   guard-cucumber (>= 0.6.1)
@@ -262,9 +263,11 @@ DEPENDENCIES
   inherited_resources
   jquery-rails
   launchy (= 0.4.0)
+  libnotify
+  pg
   rails (= 3.1.0)
   rails-footnotes (>= 3.7)
-  rb-fsevent
+  rb-inotify
   rspec-rails (= 2.6.1)
   sass-rails (~> 3.1.0)
   sqlite3
