@@ -14,6 +14,7 @@ namespace :data do
         u.country = r["Country"]
         u.prime = r["Prime"]
         u.designation = r["Designation"]
+        puts "adding #{r["Designation"]}"
         u.development = r["Development"]
         u.production = r["Production"]
         u.operation = r["Operation"]
@@ -26,6 +27,8 @@ namespace :data do
         u.ceiling_m= r["Ceiling, m"]
         u.mission = r["Mission"]
         u.save
+      else
+        puts "Skipped #{r["Prime"]}"
       end
     end
   end
