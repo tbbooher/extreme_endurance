@@ -2,6 +2,7 @@ require 'rbconfig'
 HOST_OS = Config::CONFIG['host_os']
 source 'http://rubygems.org'
 gem 'rails', '3.1.0'
+#gem 'rack', '1.3.3'
 
 group :development, :test do
   gem 'sqlite3'
