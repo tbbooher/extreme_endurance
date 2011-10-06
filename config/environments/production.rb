@@ -58,6 +58,8 @@ Extreme::Application.configure do
   # Compress JavaScript and CSS  
   config.assets.compress = true  
 
+  config.assets.precompile += %w[active_admin.css active_admin.js]
+
   # Don't fallback to assets pipeline  
   config.assets.compile = false  
 
