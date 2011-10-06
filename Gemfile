@@ -23,6 +23,7 @@ case HOST_OS
   when /linux/i
     gem 'libnotify', :group => :development
     gem 'rb-inotify', :group => :development
+    gem 'pg', :group => :production
   when /mswin|windows/i
     gem 'rb-fchange', :group => :development
     gem 'win32console', :group => :development
@@ -49,11 +50,11 @@ group :assets do
   gem 'uglifier'  
 end
 
-group :production do
+#group :production do
 #  gem 'therubyracer-heroku'
-  gem 'pg'
+
 #  gem 'arel'
-end
+#end
 
 gem 'jquery-rails'
 
