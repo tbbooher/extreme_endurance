@@ -1,12 +1,12 @@
 ActiveAdmin.register Ua do
   index do
-    column "Prime", :prime
     column "Designation", :designation
-    column "Operation", :Operation
-    column "Endurance (days)", :endurance
-    column "Payload (lbs)", :payload_lbs
+    column "Prime", :prime
+    column "Operation", :operation
+    column "Endurance (hr)", :endurance_hr
+    column "Payload (lbs)", :payload_weight_kg
     column "Range (km)", :range_km
-    column "Ceiling (M)", "ceiling"
+    column "Ceiling (M)", :ceiling_m
     column "Mission", :mission
     default_actions
   end
