@@ -9,22 +9,24 @@ namespace :data do
     result = JSON.parse(data)
 
     result.each do |r|
-      u = Ua.new
-      u.country = r["Country"]
-      u.prime = r["Prime"]
-      u.designation = r["Designation"]
-      u.development = r["Development"]
-      u.production = r["Production"]
-      u.operation = r["Operation"]
-      u.propulsion = r["Propulsion"]
-      u.gross_wt_kg = r["Gross Wt. kg"]
-      u.payload_weight_kg = r["Payload Weight, kg"]
-      u.wing_span_m = r["Wing Span, m"]
-      u.endurance_hr = r["Endurance, hr"]
-      u.range_km = r["Range, km"]
-      u.ceiling_m= r["Ceiling, m"]
-      u.mission = r["Mission"]
-      u.save
+      unless (r["Designation"].empty? && r["Operation"].empty?)
+        u = Ua.new
+        u.country = r["Country"]
+        u.prime = r["Prime"]
+        u.designation = r["Designation"]
+        u.development = r["Development"]
+        u.production = r["Production"]
+        u.operation = r["Operation"]
+        u.propulsion = r["Propulsion"]
+        u.gross_wt_kg = r["Gross Wt. kg"]
+        u.payload_weight_kg = r["Payload Weight, kg"]
+        u.wing_span_m = r["Wing Span, m"]
+        u.endurance_hr = r["Endurance, hr"]
+        u.range_km = r["Range, km"]
+        u.ceiling_m= r["Ceiling, m"]
+        u.mission = r["Mission"]
+        u.save
+      end
     end
   end
 end
