@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  country: 
+  prime: 
+  designation: 
+  development: 
+  production: 
+  operation: 
+  propulsion: 
+  gross_wt_kg: 
+  payload_weight_kg: 
+  wing_span_m: 
+  endurance_hr: 
+  range_km: 
+  ceiling_m: 
+  mission: MyString
+
+two:
+  country: 
+  prime: 
+  designation: 
+  development: 
+  production: 
+  operation: 
+  propulsion: 
+  gross_wt_kg: 
+  payload_weight_kg: 
+  wing_span_m: 
+  endurance_hr: 
+  range_km: 
+  ceiling_m: 
+  mission: MyString

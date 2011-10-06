@@ -1,5 +1,7 @@
 Extreme::Application.routes.draw do
 
+  resources :uas
+
   #get \"users\/show\"
 
   root :to => "home#index"

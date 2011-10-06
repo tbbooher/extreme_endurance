@@ -1,0 +1,73 @@
+<%= form_for(@ua) do |f| %>
+  <% if @ua.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ua.errors.count, "error") %> prohibited this ua from being saved:</h2>
+
+      <ul>
+      <% @ua.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :prime %><br />
+    <%= f.text_field :prime %>
+  </div>
+  <div class="field">
+    <%= f.label :designation %><br />
+    <%= f.text_field :designation %>
+  </div>
+  <div class="field">
+    <%= f.label :development %><br />
+    <%= f.text_field :development %>
+  </div>
+  <div class="field">
+    <%= f.label :production %><br />
+    <%= f.text_field :production %>
+  </div>
+  <div class="field">
+    <%= f.label :operation %><br />
+    <%= f.text_field :operation %>
+  </div>
+  <div class="field">
+    <%= f.label :propulsion %><br />
+    <%= f.text_field :propulsion %>
+  </div>
+  <div class="field">
+    <%= f.label :gross_wt_kg %><br />
+    <%= f.text_field :gross_wt_kg %>
+  </div>
+  <div class="field">
+    <%= f.label :payload_weight_kg %><br />
+    <%= f.text_field :payload_weight_kg %>
+  </div>
+  <div class="field">
+    <%= f.label :wing_span_m %><br />
+    <%= f.text_field :wing_span_m %>
+  </div>
+  <div class="field">
+    <%= f.label :endurance_hr %><br />
+    <%= f.text_field :endurance_hr %>
+  </div>
+  <div class="field">
+    <%= f.label :range_km %><br />
+    <%= f.text_field :range_km %>
+  </div>
+  <div class="field">
+    <%= f.label :ceiling_m %><br />
+    <%= f.text_field :ceiling_m %>
+  </div>
+  <div class="field">
+    <%= f.label :mission %><br />
+    <%= f.text_field :mission %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

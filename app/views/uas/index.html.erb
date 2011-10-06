@@ -1,0 +1,49 @@
+<h1>Listing uas</h1>
+
+<table>
+  <tr>
+    <th>Country</th>
+    <th>Prime</th>
+    <th>Designation</th>
+    <th>Development</th>
+    <th>Production</th>
+    <th>Operation</th>
+    <th>Propulsion</th>
+    <th>Gross wt kg</th>
+    <th>Payload weight kg</th>
+    <th>Wing span m</th>
+    <th>Endurance hr</th>
+    <th>Range km</th>
+    <th>Ceiling m</th>
+    <th>Mission</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @uas.each do |ua| %>
+  <tr>
+    <td><%= ua.country %></td>
+    <td><%= ua.prime %></td>
+    <td><%= ua.designation %></td>
+    <td><%= ua.development %></td>
+    <td><%= ua.production %></td>
+    <td><%= ua.operation %></td>
+    <td><%= ua.propulsion %></td>
+    <td><%= ua.gross_wt_kg %></td>
+    <td><%= ua.payload_weight_kg %></td>
+    <td><%= ua.wing_span_m %></td>
+    <td><%= ua.endurance_hr %></td>
+    <td><%= ua.range_km %></td>
+    <td><%= ua.ceiling_m %></td>
+    <td><%= ua.mission %></td>
+    <td><%= link_to 'Show', ua %></td>
+    <td><%= link_to 'Edit', edit_ua_path(ua) %></td>
+    <td><%= link_to 'Destroy', ua, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ua', new_ua_path %>
