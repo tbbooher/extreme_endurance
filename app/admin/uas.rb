@@ -11,14 +11,24 @@ ActiveAdmin.register Ua do
     default_actions
   end
 
-  #form do |f|
-  #  f.inputs "Details" do
-  #    f.input :name
-  #    f.input :endurance, :label => "Endurance (days)"
-  #    f.input :service_ceiling, :label => "Cruise Altitude (kft)"
-  #    f.input :max_speed, :label => "Cruise Speed (kts)"
-  #    f.input :payload_lbs, :label => "Payload (lbs)"
-  #  end
-  #  f.buttons
-  #end
+  form do |f|
+    f.inputs "Main Stuff" do
+      f.input :designation
+      f.input :prime
+      f.input :operation
+      f.input :endurance_hr, :label => "Endurance (hr)"
+      f.input :payload_weight_kg
+      f.input :range_km
+      f.input :ceiling_m
+      f.input :mission
+    end
+    f.inputs "Details" do
+      f.input :wing_span_m
+      f.input :propulsion
+      f.input :gross_wt_kg
+      f.input :production
+      f.input :country
+    end
+    f.buttons
+  end
 end
