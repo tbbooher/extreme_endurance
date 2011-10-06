@@ -27,7 +27,7 @@ ActiveAdmin.register Ua do
       f.input :propulsion
       f.input :gross_wt_kg
       f.input :production
-      f.input :country
+      f.input :country, :as => :country
     end
     f.buttons
   end
