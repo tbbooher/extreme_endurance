@@ -5,6 +5,7 @@
     = stylesheet_link_tag :application
     = javascript_include_tag :application
     = yield :javascript_includes
+    = javascript_include_tag "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     = csrf_meta_tag
   %body
     %div#wrapper
