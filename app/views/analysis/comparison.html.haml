@@ -4,10 +4,6 @@
 -# content_for :javascript_includes do
   =# javascript_include_tag "chart.js"
 
-%p
-  Some math, just to test my mathjax script:
-  $$ \int_a^b c $$
-
 %h3 Endurance, Altitude and Payload Size (the size of the bubble)
 
 %p Axis will come later, general trend is as expected.
@@ -21,6 +17,15 @@
   Mouseover to see these entries. You can also zoom in through mouse dragging.
 
 = high_chart("endurance_and_altitude_id", @h) do |c|
+  = "options.tooltip.formatter = function() { return this.point.designation;}".html_safe
+
+%h3 Endurance vs Altitude by Propulsion Type
+
+%p
+  Same as above, but grouped by propulsion type. I am interested in which propulsion types enable access to different
+  regions in this space.
+
+= high_chart("by_propulsion_type_id", @h_propulsion) do |c|
   = "options.tooltip.formatter = function() { return this.point.designation;}".html_safe
 
 :css
@@ -39,11 +44,9 @@
 %script{:language => "JavaScript"}
   = raw render :partial => "chart.js"
 
-%p We want to show a simple plot of altitude, airspeed and persistence
-
-%p I would also like to time available for each asset as a function of distance to target. I would like this to read from the database
-
-%p I would also like to add the ability for a system to have_many :capabilities
+%p
+  Next plot I want to do is a 'seeking alpha' for these systems, which ones are more efficient? They can do higher
+  and farther with the same potential energy. Not sure if this is a fair metric, but I'm interested.
 
 
 
