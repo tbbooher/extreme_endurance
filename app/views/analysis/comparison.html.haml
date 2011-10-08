@@ -5,18 +5,23 @@
   =# javascript_include_tag "chart.js"
 
 %p
-  Data is currently wrong! Draw no conclusions from this chart
+  Some math:
   $$ \int_a^b c $$
 
 %div#chart
 
-%div#map
+%h3 Endurance vs Altitude
+
+= high_chart("endurance_and_altitude_id", @h) do |c|
+  = "options.tooltip.formatter = function() { return this.point.designation;}".html_safe
 
 :css
+  /*
   path {
     stroke-width: 2px;
     stroke: rgb(200,0,0);
   }
+  */
 
   .point {
    fill: rgb(51, 156, 255);

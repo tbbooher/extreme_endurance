@@ -44,6 +44,7 @@ gem 'heroku'
 #gem 'barista'
 #gem 'therubyracer', :require => nil
 gem 'inherited_resources'
+gem 'lazy_high_charts', :git => 'git://github.com/michelson/lazy_high_charts.git'
 
 gem 'sass-rails', " ~> 3.1.0"
 

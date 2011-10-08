@@ -1,8 +1,9 @@
 altitude = [<%= @rpas.map(&:ceiling_m).join(",") %>]
 endurance = [<%= @rpas.map(&:endurance_hr).join(",") %>]
 payload = [<%= @rpas.map(&:payload_weight_kg).join(",") %>]
+designation = [<%= @rpas.map(&:endurance_hr).join(",") %>]
 data = []
-data.push({"x": endurance[i], "y": altitude[i], "payload": payload[i]}) for i in [0..altitude.length]
+data.push({"endurance": endurance[i], "altitude": altitude[i], "payload": payload[i]}, "designation": designation[i]) for i in [0..altitude.length]
 
 w = 800
 h = 400
@@ -12,7 +13,7 @@ x_max = d3.max(endurance)
 y_max = d3.max(altitude)
 
 y = d3.scale.linear().domain([ 0, y_max ]).range([+ margin, h - margin ])
-x = d3.scale.linear().domain([ 0, x_max ]).range([+ margin, w - margin ])
+x = d3.scale.linear().domain([ 0, x_max ]).range([+ margin*4, w - margin ])
 
 vis = d3.select("#chart").append("svg:svg")
   .attr("width", w)
@@ -24,10 +25,14 @@ h= h-margin
 # Add path layer
 vis.selectAll("circle").data(data).enter().append("svg:circle")
   .attr("class", (d) -> 'point')
-  .attr("cx", (d) -> w*(d.x/x_max))
-  .attr("cy", (d) -> h-h*d.y/y_max)
-  .attr("r", (d) -> 10*(d.payload/d3.max(payload)))
-  .attr("fill-opacity", 0.5)
+  .attr("cx", (d) -> x(d.endurance))
+  .attr("cy", (d) -> y(d.altitude))
+  .attr("r", (d) -> 100*(d.payload/d3.max(payload)))
+  .attr("fill-opacity", 0.3)
+  .append("svg:title").text("foo")
+  .on("click", -> d3.select(this).attr('r', 8))
+
+
 
 # Add tick groups
 ticks = vis.selectAll('.tick')
