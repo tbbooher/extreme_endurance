@@ -5,12 +5,20 @@
   =# javascript_include_tag "chart.js"
 
 %p
-  Some math:
+  Some math, just to test my mathjax script:
   $$ \int_a^b c $$
+
+%h3 Endurance, Altitude and Payload Size (the size of the bubble)
+
+%p Axis will come later, general trend is as expected.
 
 %div#chart
 
 %h3 Endurance vs Altitude
+
+%p
+  This chart shows all database entries that have a payload, designation, altitude and endurance. (~590 entries).
+  Mouseover to see these entries. You can also zoom in through mouse dragging.
 
 = high_chart("endurance_and_altitude_id", @h) do |c|
   = "options.tooltip.formatter = function() { return this.point.designation;}".html_safe
