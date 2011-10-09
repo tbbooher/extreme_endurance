@@ -24,11 +24,41 @@
 %p
   Same as above, but grouped by propulsion type. I am interested in which propulsion types enable access to different
   regions in this space.
+  %b Click on a point to see details.
 
-= high_chart("by_propulsion_type_id", @h_propulsion) do |c|
-  = "options.tooltip.formatter = function() { return this.point.designation;}".html_safe
-
+%div#interactive_chart
+  %div#left_side
+    = high_chart("by_propulsion_type_id", @h_propulsion) do |c|
+      = "options.tooltip.formatter = function() { return this.point.designation;}".html_safe
+      :plain
+         options.plotOptions = {
+             series: {
+                cursor: 'pointer',
+                point: {
+                   events: {
+                      click: function() {
+                         $("#description").html(this.description);
+                      }
+                   }
+                },
+             }
+          }
+  %div#right_side
+    %div#description
 :css
+  div#interactive_chart {
+   width:1101px;
+  }
+  div#right_side {
+    width:400px;
+    height:400px;
+    float: right;
+  }
+  div#left_side {
+    width:700px;
+    height:400px;
+    float: left;
+  }
   /*
   path {
     stroke-width: 2px;
@@ -40,6 +70,34 @@
    fill: rgb(51, 156, 255);
    stroke-width:2px;
   }
+
+  #description li {
+    list-style:none;
+    width:275px;
+  }
+
+  #description li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  span.links {
+    float:left;
+    width:140px;
+    font-weight: bold;
+    font-size: 11px;
+  }
+
+  span.rechts {
+    float:right;
+    width:250px;
+    font-size:11px;
+  }
+
+%div{style: "clear:both;"}
 
 %script{:language => "JavaScript"}
   = raw render :partial => "chart.js"
