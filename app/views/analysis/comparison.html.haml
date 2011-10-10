@@ -23,8 +23,9 @@
 
 %p
   Same as above, but grouped by propulsion type. I am interested in which propulsion types enable access to different
-  regions in this space.
-  %b Click on a point to see details.
+  regions in this space. In particular, I am interested in what the different regions on this plot map to. Obviously,
+  they each enable different capabilities and incur different costs, as well as impose engineering constraints.
+  %b Click on a point to see details. Drag to zoom.
 
 %div#interactive_chart
   %div#left_side
@@ -110,8 +111,9 @@
   = raw render :partial => "chart.js"
 
 %p
-  Next plot I want to do is a 'seeking alpha' for these systems, which ones are more efficient? They can do higher
-  and farther with the same potential energy. Not sure if this is a fair metric, but I'm interested.
+  Next plot I want to do is to find the 'alpha' for these systems, which ones are more efficient? To what extent
+  can they fly higher and farther with the same fuel weight? Not sure if this is a fair metric, but I'm interested in
+  how uniform the efficiency of these options is.
 
 
 
